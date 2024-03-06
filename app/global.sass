@@ -1,0 +1,82 @@
+$background: rgba(30, 30, 30, 1)
+
+*
+    box-sizing: border-box
+    font-size: 1rem
+    color: rgba(255, 255, 255, 1)
+
+*:focus
+    outline: 0
+    
+body
+    background: $background
+    margin: 0
+    padding: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-flow: column
+    height: 100vh
+    width: 100vw
+
+header, main
+    display: grid
+    grid-template-columns: 1fr auto
+    padding: 1.5rem 2.5rem
+
+    &[data-search-results]
+        height: 100%
+        width: 100%
+        display: block
+        padding-top: 0rem
+
+    input
+        border-radius: 0.5rem 0 0 0.5rem
+        padding: 0.55rem 0.8rem
+        background: rgba(255, 255, 255, 0.1)
+        width: 100%
+        max-width: 20rem
+        font-size: 0.9rem
+        border: 0
+
+    button
+        border-radius: 0 0.5rem 0.5rem 0
+        padding: 0.55rem 0.8rem
+        background: rgba(255, 255, 255, 0.1)
+        border: 0
+        margin-left: 0.15rem
+        font-size: 0.9rem
+
+    h1
+        font-size: 1.5rem
+        margin: 0
+        padding: 0.5rem 0 0.8rem
+
+    span[data-search-result]
+        display: block
+        text-decoration: none
+        padding: 0.5rem 0.8rem
+        margin-bottom: 0.5rem
+        background: rgba(255, 255, 255, 0.1)
+        border-radius: 0.4rem
+
+        h2
+            margin: 0
+            font-size: 1rem
+            padding-bottom: 0.25rem
+
+        p
+            margin: 0
+            font-size: 0.85rem
+            color: rgba(255, 255, 255, 0.7)
+
+            span
+                color: inherit
+
+                &[data-keyword]
+                    color: rgba(255, 255, 255, 0.95)
+
+        span[data-keyword]
+            background: $background
+            border-radius: 0.2rem
+            padding: 0.1rem 0.05rem
